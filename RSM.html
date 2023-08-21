@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Russel Street Medical</title>
+</head>
+<body>
+    <header>
+        <img src="RSMlogo.png" alt="Russel Street Medical Logo">
+        <h1>Russel Street Medical</h1>
+    </header>
+        
+    
+    <nav>
+        <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#who-we-are">Who We Are</a></li>
+            <li><a href="#service-area">Service Area</a></li>
+            <li><a href="external-booking-page.html" target="_blank">Book an Appointment</a></li>
+        </ul>
+    </nav>
+    
+    
+    <main>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>Russel Street Medical opened in 2020 and is located in Melbourne’s CBD at 427 Swanston Street Melbourne 3000, just opposite RMIT University Building 10 and within walking distance of Melbourne central station. We strive to help all our patients with a focus on preventative health care, a view to managing chronic health conditions with a holistic approach, and with access to a wide range of specialist care providers when needed. RMIT students and staff receive discounts through partnership programs.</p>
+            <p>Consultation Fees:</p>
+            <table>
+                <tr>
+                    <th>Consultation Type</th>
+                    <th>Normal Fee</th>
+                    <th>RMIT Member Fee</th>
+                    <th>Medicare Rebate</th>
+                </tr>
+                <tr>
+                    <td>Standard</td>
+                    <td>$80.00</td>
+                    <td>$60.00</td>
+                    <td>$40.00</td>
+                </tr>
+                <tr>
+                    <td>Long or Complex</td>
+                    <td>$125.00</td>
+                    <td>$95.00</td>
+                    <td>$75.00</td>
+                </tr>
+            </table>
+        </section>
+    
+        <section id="who-we-are">
+            <h2>Who We Are</h2>
+            <div class="staff-profile">
+                <img src="dr-stephen-hill.jpg" alt="Dr. Stephen Hill">  <!--FIX THIS ASAP-->
+                <h3>Dr. Stephen Hill</h3>
+                <p>Stephen Hill graduated from Auckland University in New Zealand in 2014 and obtained his Fellowship from the Royal Australian College of General Practitioners in 2017. Over his training and practice, Stephen worked in internal medicine at the Royal Children's Hospital Melbourne before transitioning to General Practice.</p>
+            </div>
+            <div class="staff-profile">
+                <img src="ms-kiyoko-tsu.jpg" alt="Ms Kiyoko Tsu">  <!--FIX THIS ASAP-->
+                <h3>Ms Kiyoko Tsu</h3>
+                <p>Kiyoko Tsu completed her Bachelor of Nursing at the Yong Loo Lin School of Medicine in Singapore in 2019. She is an accredited Nurse Immunizer and has worked in various hospitals within metropolitan Melbourne.</p>
+            </div>
+        </section>
+    
+        <section id="service-area">
+            <h2>Service Area</h2>
+            <p>Invite new patients to register in person and remind current patients to use the online booking system for vaccinations and blood tests.</p>
+        </section>
+
+        <section id="booking-form">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form" method="post">
+                <label for="pid">Patient ID</label>
+                <input type="text" id="pid" name="pid" placeholder="Enter Patient ID" required>
+                
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" min="2023-08-21" required>
+                
+                <label>Time</label>
+                <div class="time-checkboxes">
+                    <label class="pill">
+                        <input type="checkbox" name="time[]" value="9-12">
+                        9am - 12pm
+                    </label>
+                    <label class="pill">
+                        <input type="checkbox" name="time[]" value="12-3">
+                        12pm - 3pm
+                    </label>
+                    <label class="pill">
+                        <input type="checkbox" name="time[]" value="3-6">
+                        3pm - 6pm
+                    </label>
+                </div>
+                
+                <label for="reason">Appointment Reason</label>
+                <select id="reason" name="reason" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="childhood">Childhood Vaccination Shots</option>
+                    <option value="influenza">Influenza Shot</option>
+                    <option value="covid">Covid Booster Shot</option>
+                    <option value="blood">Blood Test</option>
+                </select>
+        
+                <div id="advice-area" class="advice">
+                    <!-- Advice based on selected reason -->
+                </div>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+    </main>
+
+        
+    
+    
+    <footer>
+        <p>Contact us: 427 Swanston Street Melbourne 3000</p>
+        <p>Your Name - Student ID: Your Student ID</p>
+    </footer>
+    
+    
+    <script src="RSM.js"></script>
+</body>
+</html>
